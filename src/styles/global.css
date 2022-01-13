@@ -1,0 +1,13 @@
+html {
+  background-color: lavenderblush;
+}
+
+p {
+  color: maroon;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

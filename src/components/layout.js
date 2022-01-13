@@ -1,15 +1,24 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { StaticImage } from "gatsby-plugin-image"
 import {
   container,
   heading,
   navLinks,
   navLinkItem,
-  navLinkText
+  navLinkText,
+  header,
+  backgroundImage,
+  main
 } from './layout.module.css'
 const Layout = ({ pageTitle, children }) => {
 	return (
 		<div className={container}>
+    <StaticImage className={backgroundImage}
+          alt='Outdoors Background'
+          src='../images/mountains-background.png'
+          layout="fullWidth"
+      />
 			<title>{pageTitle}</title>
 			<nav>
 				<ul className={navLinks}>
@@ -40,13 +49,14 @@ const Layout = ({ pageTitle, children }) => {
 					</li>
 				</ul>
 			</nav>
-			<main>
+			<main className={main}>
 				<h1 className={heading}>{pageTitle}</h1>
-				{children}
+        <div>
+				    {children}
+        </div>
 			</main>
 		</div>
 	)
 }
 
 export default Layout
-

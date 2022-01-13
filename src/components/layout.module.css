@@ -1,6 +1,6 @@
 .container {
-	margin: auto;
-	max-width: 500px;
+	margin: 0;
+	width: 100%;
 	font-family: sans-serif;
 }
 
@@ -12,6 +12,8 @@
 	display: flex;
 	list-style: none;
 	padding-left: 0;
+	z-index: 2;
+	position: fixed;
 }
 
 .nav-link-item {
@@ -20,4 +22,28 @@
 
 .nav-link-text {
 	color: black;
+}
+
+.header {
+	margin: auto;
+	width: 100%;
+	height: 500px;
+}
+
+.background-image {
+  top: 0;
+  right: 0;
+  left: 0;
+	max-height: 350px;
+  width: 100%;
+	z-index: 0;
+	position: fixed;
+	display: block;
+}
+
+.main {
+	position: relative;
+	display: block;
+	z-index: 0;
+	top: 350px;
 }
